@@ -1,0 +1,157 @@
+.requests-page {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 22px;
+}
+
+.requests-filter {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+}
+
+.requests-filter select {
+  width: 100%;
+  border: 1px solid #c9d6e2;
+  border-radius: 8px;
+  padding: 13px 14px;
+  color: #102033;
+  background: white;
+}
+
+.requests-filter button {
+  border: 0;
+  border-radius: 8px;
+  padding: 13px 18px;
+  background: #2f80ed;
+  color: white;
+  font-weight: 800;
+}
+
+.requests-message {
+  margin: 0;
+  color: #157347;
+  font-weight: 700;
+}
+
+.requests-list {
+  display: grid;
+  gap: 14px;
+}
+
+.request-card {
+  background: white;
+  border: 1px solid #d8e2ec;
+  border-radius: 8px;
+  padding: 18px;
+  display: grid;
+  gap: 16px;
+  box-shadow: 0 10px 26px rgba(16, 32, 51, 0.05);
+}
+
+.request-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.request-card h3 {
+  margin: 12px 0 8px;
+  color: #102033;
+  font-size: 22px;
+}
+
+.request-card p {
+  margin: 0;
+  color: #42566f;
+}
+
+.request-meta {
+  min-width: 240px;
+  display: grid;
+  gap: 8px;
+  color: #52677f;
+}
+
+.request-meta strong {
+  color: #102033;
+}
+
+.request-status {
+  display: inline-flex;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.request-status.pending {
+  background: #fff4cc;
+  color: #8a5a00;
+}
+
+.request-status.approved {
+  background: #dceeff;
+  color: #175ea8;
+}
+
+.request-status.rejected {
+  background: #ffe1df;
+  color: #b42318;
+}
+
+.request-status.returned {
+  background: #dff8ea;
+  color: #11734b;
+}
+
+.request-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.request-actions button {
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 14px;
+  color: white;
+  font-weight: 800;
+}
+
+.request-actions .approve {
+  background: #29a37a;
+}
+
+.request-actions .reject {
+  background: #d64545;
+}
+
+.request-actions .return {
+  background: #2f80ed;
+}
+
+.empty-state {
+  margin: 0;
+  padding: 22px;
+  background: white;
+  border: 1px dashed #b8c7d8;
+  border-radius: 8px;
+  color: #52677f;
+}
+
+@media (max-width: 760px) {
+  .requests-filter {
+    grid-template-columns: 1fr;
+  }
+
+  .request-main {
+    display: grid;
+  }
+
+  .request-meta {
+    min-width: 0;
+  }
+}

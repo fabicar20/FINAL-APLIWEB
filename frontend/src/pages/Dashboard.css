@@ -1,0 +1,90 @@
+.dashboard-layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  background: #eef3f8;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background: #0f2d3f;
+  color: #ffffff;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.sidebar p {
+  margin: 18px 0 8px;
+  color: #d8edf5;
+  font-size: 16px;
+}
+
+.sidebar span {
+  display: inline-flex;
+  width: fit-content;
+  background: #29a37a;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.sidebar-nav {
+  display: grid;
+  gap: 10px;
+  margin-top: 34px;
+}
+
+.sidebar-nav button,
+.logout-button {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.sidebar-nav button:hover,
+.logout-button:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.sidebar-nav button.active {
+  background: #ffffff;
+  color: #0f2d3f;
+}
+
+.dashboard-content {
+  min-width: 0;
+  padding: 32px;
+}
+
+@media (max-width: 820px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    height: auto;
+    gap: 22px;
+  }
+
+  .dashboard-content {
+    padding: 20px;
+  }
+}

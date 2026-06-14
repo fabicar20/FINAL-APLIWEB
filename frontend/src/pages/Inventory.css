@@ -1,0 +1,279 @@
+.inventory-page {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 16px;
+}
+
+.section-header h2 {
+  margin: 0;
+  color: #102033;
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+.section-header p {
+  margin: 8px 0 0;
+  color: #5d7188;
+  font-size: 17px;
+}
+
+.search-bar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+}
+
+.search-bar input,
+.equipment-form input,
+.equipment-form textarea {
+  width: 100%;
+  border: 1px solid #c9d6e2;
+  border-radius: 8px;
+  padding: 13px 14px;
+  font-size: 15px;
+  color: #102033;
+  background: #ffffff;
+  outline: none;
+}
+
+.search-bar input:focus,
+.equipment-form input:focus,
+.equipment-form textarea:focus {
+  border-color: #2f80ed;
+  box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.14);
+}
+
+.search-bar button,
+.equipment-form button {
+  border: 0;
+  border-radius: 8px;
+  padding: 13px 18px;
+  background: #2f80ed;
+  color: white;
+  font-weight: 800;
+}
+
+.search-bar button:hover,
+.equipment-form button:hover {
+  background: #1f6fd6;
+}
+
+.equipment-form {
+  display: grid;
+  gap: 16px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #d8e2ec;
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(16, 32, 51, 0.06);
+}
+
+.equipment-form h3 {
+  margin: 0;
+  color: #102033;
+  font-size: 22px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.equipment-form textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.form-message {
+  margin: 0;
+  color: #157347;
+  font-weight: 700;
+}
+
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.equipment-card {
+  min-height: 250px;
+  background: #ffffff;
+  border: 1px solid #d8e2ec;
+  border-radius: 8px;
+  padding: 20px;
+  display: grid;
+  gap: 14px;
+  box-shadow: 0 10px 26px rgba(16, 32, 51, 0.05);
+}
+
+.card-top,
+.availability {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: #5d7188;
+  font-size: 14px;
+}
+
+.card-top strong {
+  color: #102033;
+}
+
+.equipment-card h3 {
+  margin: 0;
+  color: #102033;
+  font-size: 23px;
+}
+
+.equipment-card p {
+  margin: 0;
+  color: #42566f;
+  line-height: 1.5;
+}
+
+.status {
+  width: fit-content;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.status.available {
+  background: #dff8ea;
+  color: #11734b;
+}
+
+.status.unavailable {
+  background: #ffe1df;
+  color: #b42318;
+}
+
+@media (max-width: 980px) {
+  .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .section-header {
+    display: block;
+  }
+
+  .section-header h2 {
+    font-size: 28px;
+  }
+
+  .search-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.loan-actions {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.loan-actions input {
+  width: 100%;
+  border: 1px solid #c9d6e2;
+  border-radius: 8px;
+  padding: 10px;
+  color: #102033;
+  background: #ffffff;
+}
+
+.loan-actions button {
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 12px;
+  background: #29a37a;
+  color: white;
+  font-weight: 800;
+}
+
+.loan-actions button:hover {
+  background: #218967;
+}
+
+@media (max-width: 620px) {
+  .loan-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+.admin-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.admin-actions button {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #2f80ed;
+  color: white;
+  font-weight: 800;
+}
+
+.admin-actions .danger {
+  background: #d64545;
+}
+
+.edit-form {
+  display: grid;
+  gap: 10px;
+}
+
+.edit-form input,
+.edit-form textarea,
+.edit-form select {
+  width: 100%;
+  border: 1px solid #c9d6e2;
+  border-radius: 8px;
+  padding: 10px;
+  color: #102033;
+  background: white;
+}
+
+.edit-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-actions button {
+  flex: 1;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #29a37a;
+  color: white;
+  font-weight: 800;
+}
+
+.edit-actions button[type="button"] {
+  background: #6b7c8f;
+}
